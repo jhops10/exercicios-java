@@ -17,7 +17,14 @@ public class Exercicio02 {
 			usuario = sc.next();
 			System.out.println("Defina a sua senha: ");
 			senha = sc.next();
-		} while(usuario.equals(senha));
+			
+			if (usuario.equalsIgnoreCase(senha)) {
+				System.out.println("Senha inválida, digite novamente");
+			} else {
+				System.out.println("Cadastro efetuado com sucesso!");
+			}
+			
+		} while(usuario.equalsIgnoreCase(senha));
 		
 		sc.close();
 
