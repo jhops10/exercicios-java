@@ -1,6 +1,5 @@
 package exercicios_19;
 
-import java.util.Locale;
 import java.util.Scanner;
 
 public class Exercicio05 {
