@@ -1,11 +1,13 @@
 package exercicios_37_a_43.exercicio01;
 
-public abstract class ContaBancaria {
+public  class ContaBancaria {
 	private String nomeCliente;
 	private String numConta;
 	private double saldo;
 	
-	
+	public ContaBancaria() {
+		
+	}
 	
 	public ContaBancaria(String nomeCliente, String numConta, double saldo) {
 		this.nomeCliente = nomeCliente;
@@ -51,11 +53,13 @@ public abstract class ContaBancaria {
 
 
 
-	public void sacar(double valorSaque) {
+	public boolean sacar(double valorSaque) {
 		if (valorSaque <= saldo) {
 			this.saldo -= valorSaque;
+			return true;
 		} else {
 			System.out.println("Saldo Insuficiente");
+			return false;
 		}
 	}
 	
@@ -67,4 +71,17 @@ public abstract class ContaBancaria {
 			System.out.println("O valor do depósito deve ser maior do que 0.");
 		}
 	}
+
+
+
+	@Override
+	public String toString() {
+		String s =  "[Conta Bancaria] ";
+		s += "nomeCliente = " + nomeCliente + ", numConta = " + numConta + ", saldo = " + saldo + " ";
+		return s;
+	}
+	
+	
+	
+	
 }
