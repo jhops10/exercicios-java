@@ -41,4 +41,14 @@ public class Cilindro extends Figura3D implements DimensaoSuperficial, DimensaoV
 		return areaTotal;
 	}
 
+	@Override
+	public String toString() {
+		String s = "Cilindro: \n";
+		s += "Área: " + this.calcularArea() + ", ";
+		s += "Volume: " + this.calcularVolume() + "\n";
+		return s;                                   
+	}
+	
+	
+
 }

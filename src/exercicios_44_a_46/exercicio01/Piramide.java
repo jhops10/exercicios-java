@@ -39,4 +39,11 @@ public class Piramide extends Figura3D implements DimensaoSuperficial, DimensaoV
 		return area;
 	}
 
+	@Override
+	public String toString() {
+		String s = "Pirâmide: \n";
+		s += "Área: " + this.calcularArea() + ", ";
+		s += "Volume: " + this.calcularVolume() + "\n";
+		return s;                                   
+	}
 }

@@ -28,5 +28,13 @@ public class Cubo extends Figura3D implements DimensaoSuperficial, DimensaoVolum
 		double area = (lado * lado) * 6;
 		return area;
 	}
+	
+	@Override
+	public String toString() {
+		String s = "Cubo: \n";
+		s += "Área: " + this.calcularArea() + ", ";
+		s += "Volume: " + this.calcularVolume() + "\n";
+		return s;                                   
+	}
 
 }

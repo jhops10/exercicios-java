@@ -35,5 +35,12 @@ public class Triangulo extends Figura2D implements DimensaoSuperficial {
 		double area = (base * altura) / 2;
 		return area;
 	}
+	
+	@Override
+	public String toString() {
+		String s = "Triângulo: \n";
+		s += "Área: " + this.calcularArea() + "\n";
+		return s;                                   
+	}
 
 }

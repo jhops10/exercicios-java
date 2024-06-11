@@ -26,5 +26,12 @@ public class Circulo extends Figura2D implements DimensaoSuperficial {
 		double area = PI * (Math.pow(this.raio, 2));
 		return area;
 	}
+	
+	@Override
+	public String toString() {
+		String s = "Circulo: \n";
+		s += "Área: " + this.calcularArea() + "\n";
+		return s;                                   
+	}
 
 }
